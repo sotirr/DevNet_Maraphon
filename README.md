@@ -8,9 +8,13 @@
 5. Создает csv файл с отчетом в текущем каталоге
 
 Пример отчета:
+
 hostname;model;ios_ver;check_pe;cdp_status;ntp_sync_status
+
 R1;Linux;15.5(2)T;PE;CDP is ON, 2 peers;Not Sync
+
 R2;Linux;15.5(2)T;PE;CDP is ON, 2 peers;Not Sync
+
 
 
 # Как пользоваться
