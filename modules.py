@@ -21,7 +21,7 @@ def _normalized_name(hostname):
 
 def _check_dir(dir_name):
     '''
-    Проверяет наличие каталогв в backup_path и если не находит то создает
+    Проверяет наличие каталогов в backup_path и если не находит то создает
     На вход ждет имя каталога, возвращает абсолютный путь до каталога.
     '''
     if not (os.path.exists(backup_path)):
@@ -51,7 +51,7 @@ def _save_backup(ssh, hostname):
 def _check_cdp(ssh, hostname):
     '''
     Проверяет запущен ли CDP на устройстве.
-    Возвращает статус протоколаCDP и количесто соседей
+    Возвращает статус протокола CDP и количество соседей
     если протокол запущен.
     '''
     logging.info(f'Checking CDP on {hostname}')
@@ -104,7 +104,7 @@ def _ping_ntp(ssh, hostname, ntp_server):
 
 def _command_in_config(ssh, commands):
     '''
-    Возвращаем список команд которых нет конфиурационном файле
+    Возвращаем список команд, которых еще нет в конфигурации
     '''
     run_config = ssh.send_command('sh run\n')
     result = []
@@ -210,7 +210,7 @@ def make_report(data):
 def inventory():
     '''
     Читает инвентарный файл csv и возвращает список в котором
-    элеменыт это отделные устройства описанные в виде OrderedDict
+    элементы это отдельные устройства, описанные в виде OrderedDict
 
     Ожидаемый формат CSV:
     hostname;ip;username;password;secret;device_type

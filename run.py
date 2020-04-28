@@ -29,5 +29,5 @@ if __name__ == '__main__':
     with ThreadPoolExecutor(max_workers=4) as executor:
         result = executor.map(connect_to_device, devices)
 
-    # формируем отчет отчет
+    # формируем отчет
     make_report(result)
